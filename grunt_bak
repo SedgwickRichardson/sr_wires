@@ -1,0 +1,67 @@
+module.exports = function(grunt) {
+    
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        shell: {
+            jekyllBuild: {
+                command: 'bundle exec jekyll build'
+            },
+            jekyllServe: {
+                command: 'bundle exec jekyll serve -w'
+            }
+        },
+        recess: {
+          dist: {
+            options: {
+              compile: true,
+              compress: true
+            },
+            files: {
+              'assets/css/main.min.css': [
+                'assets/less/app.less'
+              ]
+            }
+          }
+        },
+        watch: {
+            files: [
+                'assets/less/*.less',
+                'assets/less/bootstrap/*.less',
+                '_includes/*.html',
+                '_layouts/*.html',
+                '_posts/*.markdown',
+                '_config.yml',
+                'index.html'
+            ],
+            tasks: [
+                'shell:jekyllBuild', 
+                'shell:jekyllServe',
+                'recess'
+            ],
+            options: {
+                interrupt: true,
+                atBegin: true,
+                livereload: true
+            }
+        }
+    });
+ 
+    grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-recess');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+ 
+    grunt.registerTask('default', ['shell']);
+
+    // Register tasks
+    // grunt.registerTask('default', [
+    // 'shell',
+    // 'recess'
+    // ]);
+    // grunt.registerTask('dev', [
+    // 'watch'
+    // ]);
+
+};

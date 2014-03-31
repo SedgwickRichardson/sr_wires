@@ -1,0 +1,21 @@
+{
+  "name": "Gammon",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-jekyll": "*",
+    "grunt-recess": "*",
+    "bower": "*",
+    "grunt-exec": "*"
+  },
+  "engines": {
+    "npm": "1.2.x"
+  }
+}

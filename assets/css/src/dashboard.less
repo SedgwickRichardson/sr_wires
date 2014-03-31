@@ -1,0 +1,392 @@
+body.dashboard {
+	background: @gray-lighter;
+	margin-bottom: 20px;
+	p {
+		padding: 0; margin: 0;
+	}
+	.container { width: @container-lg-desktop !important; }
+}
+.db-header {
+	padding: 10px 0px;
+	background: white;
+
+	.greeting {
+		color: @dark-orange;
+		margin-right: 10px;
+	}
+	.img-circle {
+		width: 45px; height: 45px;
+		z-index: 1000;
+		position: relative;
+	}
+	.btn-group {
+		z-index: 900;
+		margin-left: -20px;
+		.btn-default {
+			background: @gray-lighter;
+			padding: 4px 12px 4px 25px;
+			border-radius: 12px;
+			border: 1px solid darken(@gray-lighter, 10%);
+		}
+
+	}
+}
+.db-content {
+
+	border-top: 2px solid @gray-light;
+	height: 500px;
+
+}
+
+.flow-chart {
+	border-radius: 5px;
+	background: #e86837;
+	height: 652px;
+	margin: 20px 0px;
+
+	.fc-head, 
+	.fc-body {
+		//margin: 10px;
+	}
+	.fc-head {
+		padding: 20px;
+		background: white;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		h1 {
+			color: @dark-orange;
+			font-size: 18px;
+			font-weight: bold;
+			padding: 0px;
+			margin: 0px;
+		}
+		p {
+			margin-top: 2px;
+			display: block;
+		}
+	}	
+	.fc-body {
+		position: relative;
+		.help {
+			color: white;
+			font-size: 12px;
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			cursor: pointer;
+		}
+		.line {
+			background-color: @dark-orange;
+			position: absolute;
+			z-index: 1100;
+			&.line1 {
+				top: 400px;
+				left: 110px;
+				width: 370px;
+				height: 3px;
+			}
+			&.line2 {
+				top: 242px;
+				left: 110px;
+				width: 473px;
+				height: 3px;
+			}
+			&.line3 {
+				top: 242px;
+				left: 580px;
+				width: 3px;
+				height: 67px;
+			}
+
+		}
+		.arrow {
+			position: absolute;
+			bottom: -55px;
+			left: 76px;		
+		}
+		.segment {
+			width: 440px;
+			height: 80px;
+			position: absolute;
+			//overflow:hidden;
+
+			.gallery {
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				color: white;
+				cursor: pointer;
+			}
+			aside {
+				background: @dark-orange;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+				color: white;
+				float: left;
+				width: 192px;
+				height: 100%;
+				text-align: center;
+				p {
+					padding-top: 27px;
+					font-size: 15px;
+				}
+			}
+			ul {
+				width: 200px;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;				
+				background: white;
+				float: left;
+				margin: 0; padding: 0;
+				list-style: none;
+				overflow:hidden;
+				li {
+					a {
+						font-size: 15px;
+						padding: 8px 15px 8px 15px;
+						color: @gray;
+						display: block;
+						height: 40px;
+						border-bottom: 1px solid @gray-lighter;
+						&:hover {
+							background-color: @gray-lighter;
+							border-top-right-radius: 5px;
+							border-bottom-right-radius: 5px;	
+							text-decoration: none;
+							cursor: pointer;
+						}
+					}
+					.plus {
+						font-weight: bold;
+						font-family: verdana, sans-serif;
+						font-size: 20px;
+						margin-top: -5px;
+						margin-right: 8px;
+					}
+					.badge {
+						padding: 7px;
+						border-radius: 7px;
+						//margin-right: 10px;
+					}
+				}
+			}
+
+			&#t1 {
+				z-index: 1000;
+				top: 20px;
+				left: 20px;
+				.badge {
+					background-color: #84c859;
+				}
+			}
+			&#t2 {
+				z-index: 900;
+				top: 140px;
+				left: 20px;
+				.badge {
+					background-color: #1698f6;
+				}
+			}
+			&#transmittal {
+				z-index: 800;
+				top: 260px;
+				left: 20px;
+				height: 120px;
+				aside p {
+					padding-top: 50px;
+				}
+				.badge {
+					background-color: #ec5b1a;
+				}
+			}
+			&#permit-load {
+				z-index: 700;
+				top: 420px;
+				left: 20px;
+				.badge {
+					background-color: #721aeb;
+				}
+			}
+			&#design-modification {
+				z-index: 700;
+				top: 320px;
+				left: 480px;
+				height: 120px;
+				width: 195px;
+				.arrow-end {
+					position: absolute;
+					top: 67px;
+					left: 0px;
+				}
+				.dot-end {
+					position: absolute;
+					top: -11px;
+					left: 92px;
+				}
+				aside, ul {
+					float: none;
+					width: 100%;
+				}
+				aside {
+					height: 100px;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+					border-bottom-left-radius: 0px;
+					p {
+						padding-top: 38px;
+					}
+				}
+				ul {
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 5px;
+					border-bottom-left-radius: 5px;
+
+				}
+				.badge {
+					background-color: #cdbe19;
+				}
+			}			
+		}
+	}
+}
+.side-panels {
+	margin-top: 20px;
+}
+.side-panel {
+	background: #fafafa;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	h2 {
+		font-size: 18px;
+		margin: 0px; padding: 0px;
+	}		
+	.sp-search {
+		padding: 15px;
+		h2 {
+			margin-bottom: 15px;
+		}
+	}
+	.sp-head {
+		padding: 15px;
+	}
+	.sp-body {
+		padding-bottom: 20px;
+		ul {			
+			background: white;
+			margin: 0; padding: 0;
+			list-style: none;
+
+			li {
+				a {
+					font-size: 15px;
+					padding: 8px 15px 8px 15px;
+					color: @gray;
+					display: block;
+					height: 40px;
+					border-bottom: 1px solid @gray-lighter;
+					&:hover {
+						background-color: @gray-lighter;
+						border-top-right-radius: 5px;
+						border-bottom-right-radius: 5px;	
+						text-decoration: none;
+						cursor: pointer;
+					}
+					&.add {
+						font-size: 13px !important;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+@media (min-width: @screen-lg) { 
+	.flow-chart .fc-body {
+		margin: 20px;
+	}
+	.flow-chart .fc-body .segment#design-modification {
+		width: 300px;
+	}
+	.flow-chart .fc-body .segment#design-modification .dot-end {
+		left: 139px;
+	}
+	.flow-chart .fc-body .line.line2 {
+		width: 519px;
+	}
+	.flow-chart .fc-body .line.line3 {
+		left: 627px;
+	}
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxWrapper {max-width:none;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none; -ms-interpolation-mode:bicubic;}
+.cboxIframe{width:100%; height:100%; display:block; border:0; padding:0; margin:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:url(images/overlay.png) repeat 0 0;}
+#colorbox{outline:0;}
+    #cboxTopLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -101px 0;}
+    #cboxTopRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -130px 0;}
+    #cboxBottomLeft{width:21px; height:21px; background:url(images/controls.png) no-repeat -101px -29px;}
+    #cboxBottomRight{width:21px; height:21px; background:url(images/controls.png) no-repeat -130px -29px;}
+    #cboxMiddleLeft{width:21px; background:url(images/controls.png) left top repeat-y;}
+    #cboxMiddleRight{width:21px; background:url(images/controls.png) right top repeat-y;}
+    #cboxTopCenter{height:21px; background:url(images/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(images/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxLoadingOverlay{background:url(images/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+
+        /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+        #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {border:0; padding:0; margin:0; overflow:visible; width:auto; background:none; }
+        
+        /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+        #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {outline:0;}
+
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+        #cboxPrevious{position:absolute; bottom:0; left:0; background:url(images/controls.png) no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background:url(images/controls.png) no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxClose{position:absolute; bottom:0; right:0; background:url(images/controls.png) no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#000,endColorstr=#000);
+}

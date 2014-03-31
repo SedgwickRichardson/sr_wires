@@ -1,0 +1,4 @@
+- name: For wineries
+  url: wineries.html
+- name: For users
+  url: index.html
